@@ -7,6 +7,7 @@ const app = new Koa();
 app.use(bodyParser());
 
 app.use(async ctx => {
+    ctx.body = "OK";
     routes(ctx);
 });
 
