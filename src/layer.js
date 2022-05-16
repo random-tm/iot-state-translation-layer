@@ -15,8 +15,12 @@ export default async (params) => {
             if(!loadedLayers[layer]){
                 loadedLayers[layer] = await loadCode('layers', availableLayers[layer]);
             }
-            const layerData = loadedLayers[layer].default(paramVal);
-            params = {...params, ...layerData};
+            try {
+                const layerData = loadedLayers[layer].default(paramVal);
+                params = {...params, ...layerData};
+            } catch (e) {
+                console.error(e)
+            }
         }
     }
     return params;
