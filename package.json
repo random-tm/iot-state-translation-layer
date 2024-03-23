@@ -9,7 +9,7 @@
   "author": "Lucas Smith",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.6.8",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "query-string": "^7.1.1"
